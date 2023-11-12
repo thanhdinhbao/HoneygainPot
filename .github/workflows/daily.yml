@@ -1,7 +1,7 @@
 name: Daily claim
 on:
   schedule:
-    - cron: '0 14 * * *' # UTC Time, change your time here
+    - cron: '0 03 * * *' # UTC Time, change your time here
 
 jobs:
     Daily:
