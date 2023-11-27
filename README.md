@@ -1,44 +1,53 @@
-
 <h1 align="center">Honeygain Pot</h1>
-<h4 align="center">🐝 A bot that claim honeygain pot every day 🍯</h4>
+<h4 align="center">🐝A Bot that claim Honeygain pot every day🍯</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
 <p align="center">
+<img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
+<p align="center">
+<img alt="CodeQL status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg">
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"> (*)
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
-  <a href="README-vn.md">Vietnamese 🇻🇳</a>
-<p align="center">
-  <a href="#notes">Notes</a>
+  <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
   •
+  <a href="README-fr.md">Français 🇫🇷</a>
+  •
+  <a href="README-de.md">Deutsch 🇩🇪</a>
+<p align="center">
   <a href="Debug.md">Debug</a>     
   •
   <a href="#feature">Feature</a>
   •
   <a href="#usage">Usage</a>     
-</p>
+  •
+  <a href="#preview">Preview</p>
  <p align="left">
    
 <img src="Img/Logo.png"               
-     width="150" 
-     height="150"></p>
-     
-# Notes
-- Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
-- If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
-- (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
-- 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
-
-<img src="https://i.imgur.com/htGeFlY.jpg">
+     width="170" 
+     height="170"></p>
+    
+> [!NOTE]
+> - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
+> - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
+> - (*): Do not fork this repo if two of these (not only 1 and CodeQL) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
+> - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
+> <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Feature 
-- Claims honeygain pot and achievement rewards every day 🔥
+
+- Claim Honeygain pot and achievements rewards every day with GitHub Actions 🔥
+- Checking your current balance
+
 # Usage 
 
-  1. [Fork this repository](https://github.com/gorouflex/honeygainpot/fork)  
+  1. [Fork this repository](https://github.com/gorouflex/HoneygainPot/fork)
   2. Go to your forked repository
-  3. Go to Settings > Secrets and Variables > Actions. And click the button `New Repository secret`
+  3. Go to `Settings > Secrets and Variables > Actions`, and click the button `New Repository secret`
   4. For the secret name, use `MAIL_JWD` to set your honeygain mail and `PASS_JWD` for your password
   5. Go to your forked repository and go to the Actions tab and press the button `I understand my workflows, go ahead and enable them`
 
@@ -46,6 +55,7 @@
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
+> [!IMPORTANT]
 Daily workflows file path (default is 14:00 UTC +0): `.github/workflows/daily.yml`
 
 Well, GitHub uses UTC time (UTC +0) for scheduling workflows, so we should convert it to our timezone.
@@ -66,10 +76,16 @@ on:
     - cron: '0 22 * * *' # UTC Time
 ```
 
-## Note
+> [!NOTE]
+> GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry!
 
-GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry!
+# Preview
 
-## Big thanks to
+<p align="center">
+  <img src="Img/preview (1).jpeg">
+  <img src="Img/preview.jpeg">
+</p>
+
+## Thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
-- [rfoal](https://github.com/rfoel/)-[duolingo](https://github.com/rfoel/duolingo) for ideas
+- [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) for idea
